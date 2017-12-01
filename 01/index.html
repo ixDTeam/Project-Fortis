@@ -27,6 +27,8 @@
       </button>
 
       <h3 id="bigOne"></h3>
+
+      <h2 id="testFeld"></h2>
     </div>
 
   <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
@@ -85,6 +87,10 @@
     var bigOne = document.getElementById('bigOne');
     var dbRef = firebase.database().ref().child('text');
     dbRef.on('value', snap => bigOne.innerText = snap.val());
+
+    var testFeld = document.getElementById('testFeld');
+    var dbRef = firebase.database().ref().child('name');
+    dbRef.on('value', snap => testFeld.innerText = snap.val());
   </script>
 
 
